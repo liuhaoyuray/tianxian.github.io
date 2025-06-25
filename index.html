@@ -1,8 +1,6 @@
-
-<!DOCTYPE html>
-<html lang="zh">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>北航《现代天线技术》期末题库选择题练习</title>
   <style>
     body {
@@ -10,10 +8,28 @@
       padding: 20px;
       max-width: 800px;
       margin: auto;
+      font-size: 18px;
+      line-height: 1.6;
     }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 20px;
+      }
+
+      .options button {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+    }
+
     .question-box {
       margin-bottom: 20px;
     }
+
     .options button {
       display: block;
       margin: 8px 0;
@@ -22,20 +38,23 @@
       font-size: 16px;
       text-align: left;
     }
+
     #feedback {
       margin-top: 10px;
       font-weight: bold;
     }
+
     #next-btn {
       margin-top: 20px;
     }
+
     #summary {
       margin-top: 30px;
       padding: 15px;
       border: 1px solid #ccc;
       background: #f9f9f9;
     }
-  
+
     #watermark {
       margin-top: 50px;
       text-align: center;
@@ -43,9 +62,9 @@
       font-size: 14px;
       user-select: none;
     }
-
-</style>
+  </style>
 </head>
+
 <body>
   <h1>北航《现代天线技术》期末题库选择题练习</h1>
   <div class="question-box" id="question-box">
