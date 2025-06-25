@@ -1,7 +1,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>北航《现代天线技术》期末题库选择题练习</title>
+  <title>2025年北航《现代天线技术》期末题库选择题练习</title>
   <style>
     html {
       font-size: 16px;
@@ -380,7 +380,56 @@
         });
         html += "</ol>";
       } else {
-        html += "<p>🎉 太棒了！全部答对！</p>";
+        html += `
+  <div id="congrats-message" class="fancy-congrats">
+    <span class="typewriter">🎉 太棒了！全部答对！你真的好棒！🎉</span>
+  </div>
+
+  <style>
+    .fancy-congrats {
+      text-align: center;
+      padding: 40px 20px;
+      animation: glow 2s infinite alternate;
+    }
+
+    .fancy-congrats .typewriter {
+      display: inline-block;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 24px;
+      font-weight: bold;
+      animation:
+        typing 3s steps(30, end),
+        blink-caret 0.7s step-end infinite;
+      color: #fff;
+      background: linear-gradient(90deg, #ff8a00, #e52e71, #9b00ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white; }
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px #ff8a00, 0 0 20px #e52e71, 0 0 30px #9b00ff;
+      }
+      100% {
+        box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff, 0 0 40px #ffff00;
+      }
+    }
+  </style>
+`;
+
       }
 
       html += '<p><button onclick="restartQuiz()">🔁 重新开始练习</button></p>';
